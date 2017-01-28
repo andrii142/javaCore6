@@ -47,5 +47,7 @@ public class UseArrays {
         }
 
 
+        int[] arrayOfOrangesSimple = {212 ,123 , 234, 345, 5443};
+
     }
 }
