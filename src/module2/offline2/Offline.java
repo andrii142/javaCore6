@@ -53,7 +53,6 @@ public class Offline {
 
         System.out.println(Arrays.toString(newArrayNames));
 
-
     }
 
     private static int sumCalculationWithBounds(int[] balances, int leftBound, int rightBound) {

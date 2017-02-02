@@ -49,5 +49,45 @@ public class UseArrays {
 
         int[] arrayOfOrangesSimple = {212 ,123 , 234, 345, 5443};
 
+
+        for (int execItem : arrayOfOrangesSimple) {
+            System.out.println(execItem);
+
+        }
+
+
+
+        String[] names = {"Vasya", "Kolya", "Petya","Vasya2", "Kolya2", "Petya2","Vasya3", "Kolya3", "Petya3", "Nastya"};
+
+        StringBuilder sb =  new StringBuilder("");
+
+        for (String execName : names) {
+
+            sb.append(execName).append(",");
+
+        }
+
+        System.out.println(sb.toString());
+
+
+
+        String result2 = "";
+
+
+        for (int i = 0; i < names.length; i++) {
+
+            if (i == 3){
+                continue;
+            }
+
+            if (i > 5){
+                break;
+            }
+            String execName = names[i];
+            result2 +=  execName + ",";
+        }
+
+        System.out.println(result2);
+
     }
 }
