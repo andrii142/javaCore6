@@ -1,4 +1,4 @@
-package module4.zoo.worldWithoutPolimofizm;
+package module4.notzoo.worldWithoutPolimofizm;
 
 /**
  * Created by citsym on 16.02.17.

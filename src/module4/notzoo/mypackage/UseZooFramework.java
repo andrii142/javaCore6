@@ -1,4 +1,4 @@
-package module4.zoo.mypackage;
+package module4.notzoo.mypackage;
 
 import module4.zoo.Animal;
 import module4.zoo.Zoo;
