@@ -32,13 +32,13 @@ public class Feed {
             }
 
             if (o instanceof Cat){
-                Dog dog = (Dog)o;
-                dog.nyamNyam();
+                Cat cat = (Cat) o;
+                cat.feed();
             }
 
-            if (o instanceof Dog){
-                Dog dog = (Dog)o;
-                dog.nyamNyam();
+            if (o instanceof Dragon){
+                Dragon dragon = (Dragon)o;
+                dragon.feed();
             }
 
         }
