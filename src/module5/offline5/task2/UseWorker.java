@@ -10,7 +10,7 @@ public class UseWorker {
         Worker[] array = new Worker[100];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Worker(1000000000000d * 1000000000000d);
+            array[i] = new WorkerFixedMonthSalary(1000000000000d * 1000000000000d);
         }
 
         double sum = 0;

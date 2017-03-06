@@ -14,7 +14,7 @@ public class UseRoomDao {
         SimpleDateFormat format = new SimpleDateFormat("mm:HH dd.MM.yyyy");
 
         Date newD = new  Date(-40, 0, 13);
-        newD.setMonth();
+//        newD.setMonth();
 
         System.out.println(format.format(newD));
 
