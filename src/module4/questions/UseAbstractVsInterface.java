@@ -9,9 +9,9 @@ public class UseAbstractVsInterface {
 
     public static void main(String[] args) {
 
-        Shrek shreck = new Shrek();
+        PeopleEater shreck = new PeopleEater();
         Donkey donkey = new Donkey();
-        Princess princess = new Princess();
+        Princess fiona = new Princess();
         Robot robot = new Robot();
 
 
@@ -20,7 +20,7 @@ public class UseAbstractVsInterface {
 
         canBeFedArray = addElementToArray(canBeFedArray, shreck);
         canBeFedArray = addElementToArray(canBeFedArray, donkey);
-        canBeFedArray = addElementToArray(canBeFedArray, princess);
+        canBeFedArray = addElementToArray(canBeFedArray, fiona);
         canBeFedArray = addElementToArray(canBeFedArray, robot);
 
 
@@ -28,11 +28,25 @@ public class UseAbstractVsInterface {
 
 
         fun(shreck);
-        fun(princess);
-        
+        fun(fiona);
+
+
+        CanBeBeFunWith cat = new CanBeBeFunWith() {
+            @Override
+            public void drinkABeer() {
+                System.out.println("Cat drinks beer too");
+            }
+
+            @Override
+            public void tellAJoke() {
+                System.out.println("Can likes to tell jokes");
+            }
+        };
+        fun(cat);
+
     }
 
-    private static void fun(CanBeBeFunWith canBeBeFunWithElement) {
+    public static void fun(CanBeBeFunWith canBeBeFunWithElement) {
         canBeBeFunWithElement.drinkABeer();
         canBeBeFunWithElement.tellAJoke();
     }

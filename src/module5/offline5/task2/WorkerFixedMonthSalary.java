@@ -7,6 +7,10 @@ public class WorkerFixedMonthSalary extends Worker {
 
     private double salary;
 
+    public WorkerFixedMonthSalary() {
+
+    }
+
     public WorkerFixedMonthSalary(double salary) {
 
         this.salary = salary;
@@ -16,4 +20,15 @@ public class WorkerFixedMonthSalary extends Worker {
     public double getMonthSalary() {
         return salary;
     }
+
+    @Override
+    public WorkerType getWorkerType() {
+        return WorkerType.FIXED_MONTH_SALARY_RATE;
+    }
+
+
+    public void incrementSalary(int percentage) {
+        salary += salary * percentage / 100;
+    }
+
 }

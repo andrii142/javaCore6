@@ -5,11 +5,11 @@ import module4.zoo.Animal;
 /**
  * Created by citsym on 17.02.17.
  */
-public class Shrek extends Animal implements CanBeFed, CanBeBeFunWith {
+public class PeopleEater extends Animal implements CanBeFed, CanBeBeFunWith {
 
 //    @Override
 //    public void feed(){
-//        System.out.println("Shrek eats people");
+//        System.out.println("PeopleEater eats people");
 //    }
 
 
@@ -19,7 +19,7 @@ public class Shrek extends Animal implements CanBeFed, CanBeBeFunWith {
 
     @Override
     public void drinkABeer() {
-        System.out.println("Shrek drinks a lot of beer");
+        System.out.println("PeopleEater drinks a lot of beer");
     }
 
     @Override

@@ -6,7 +6,11 @@ package module5.offline5.task2;
 public class WorkerByHours extends Worker {
     private double hourRate;
 
-    public WorkerByHours(int id, String name, double hourRate) {
+    private WorkerByHours(){
+
+    }
+
+    private WorkerByHours(int id, String name, double hourRate) {
 //        super(id, name);
         setId(id);
         setName(name);
@@ -15,5 +19,10 @@ public class WorkerByHours extends Worker {
 
     public double getMonthSalary() {
         return 20.8 * 8 * hourRate;
+    }
+
+    @Override
+    public WorkerType getWorkerType() {
+        return WorkerType.HOUR_RATE;
     }
 }

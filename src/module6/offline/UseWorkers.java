@@ -1,6 +1,5 @@
 package module6.offline;
 
-import module5.offline5.task2.WorkerByHours;
 import module5.offline5.task2.WorkerFixedMonthSalary;
 
 /**
@@ -15,15 +14,15 @@ public class UseWorkers {
         int expectedResult = 4992;
 
         // Execute code
-        WorkerByHours vasya = new WorkerByHours(1, "Nastya" , hourRate);
+//        WorkerByHours vasya = new WorkerByHours(1, "Nastya" , hourRate);
 
-        Double monthSalary = vasya.getMonthSalary();
+//        Double monthSalary = vasya.getMonthSalary();
         // Compare the result
 
-        int compareResult = Double.compare(monthSalary, expectedResult);
+//        int compareResult = Double.compare(monthSalary, expectedResult);
 
 
-        System.out.println(compareResult == 0 ? "Test passed" : "Test failed" );
+//        System.out.println(compareResult == 0 ? "Test passed" : "Test failed" );
 
 
 
@@ -44,6 +43,8 @@ public class UseWorkers {
 
         System.out.println(compareResult2 == 0 ? "Test passed" : "Test failed" );
 /////////////
+
+
 
 
 
