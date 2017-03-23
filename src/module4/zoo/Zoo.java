@@ -1,6 +1,6 @@
 package module4.zoo;
 
-import module4.zoo.bird.Own;
+import module4.zoo.bird.Owl;
 import module4.zoo.bird.Parrot;
 import module4.zoo.bird.Sparrow;
 import module4.zoo.mammal.Elephant;
@@ -12,30 +12,25 @@ import java.util.Arrays;
 /**
  * Created by citsym on 16.02.17.
  */
-public class Zoo {
+public final class Zoo {
 
-    public static void main(String[] args) {
+    private static Zoo INSTANCE;
+    private String name;
 
-//        int[] intArray = new int[5];
+    private Zoo(String name){
 
-        Animal[] animalsArray = new Animal[2];
+        this.name = name;
+    }
 
-        animalsArray[0] = new Monkey("Masha");
-        animalsArray[1] = new Elephant();
+    public String getName() {
+        return name;
+    }
 
-        animalsArray = addElementToArray(animalsArray, new Own());
-        animalsArray = addElementToArray(animalsArray, new Parrot());
-
-        Monkey monkeyNina = new Monkey("Nina");
-
-        animalsArray = addElementToArray(animalsArray, monkeyNina);
-
-        animalsArray = addElementToArray(animalsArray, new Sparrow());
-
-        animalsArray = addElementToArray(animalsArray, new Human());
-
-        feedAllAnimals(animalsArray);
-
+    public static Zoo getInstance() {
+        if (INSTANCE == null){
+            INSTANCE = new Zoo("Las Vegas");
+        }
+        return INSTANCE;
     }
 
     private static Animal[] addElementToArray(Animal[] animalsArray, Animal newZooMember) {
@@ -48,6 +43,53 @@ public class Zoo {
         for (Animal animal : animalsArray) {
             animal.feed();
         }
+    }
+
+    public  Animal[] initZooWithAnimals(){
+        Animal[] animalsArray = new Animal[2];
+
+        Monkey monkeyMasha = new Monkey("Masha", "Brown");
+        animalsArray[0] = monkeyMasha;
+
+        System.out.println("In mokey cage " + Monkey.countAllMonkeysInCage());
+        monkeyMasha.setFoodCount(5);
+
+        System.out.println(monkeyMasha.getName() + " has : " + monkeyMasha.getFoodCount() + monkeyMasha.getFoodName());
+
+        monkeyMasha.increaseFoodCount();
+
+        System.out.println(monkeyMasha.getName() + " has : " + monkeyMasha.getFoodCount() + monkeyMasha.getFoodName());
+
+        System.out.println("Total food monkeys has" + Monkey.getFoodCountTotal());
+
+
+        animalsArray[1] = new Elephant();
+
+        animalsArray = addElementToArray(animalsArray, new Owl());
+        animalsArray = addElementToArray(animalsArray, new Parrot());
+
+        Monkey monkeyNina = new Monkey("Nina", "Orange");
+
+        System.out.println("In mokey cage " + Monkey.countAllMonkeysInCage());
+
+        monkeyNina.setFoodCount(10);
+
+        System.out.println(monkeyNina.getName() + " has : " + monkeyNina.getFoodCount() + monkeyNina.getFoodName());
+
+        monkeyNina.increaseFoodCount();
+
+        System.out.println(monkeyNina.getName() + " has : " + monkeyNina.getFoodCount() + monkeyNina.getFoodName());
+
+        System.out.println("Total food monkeys has" + Monkey.getFoodCountTotal());
+
+
+        animalsArray = addElementToArray(animalsArray, monkeyNina);
+
+        animalsArray = addElementToArray(animalsArray, new Sparrow());
+
+        animalsArray = addElementToArray(animalsArray, new Human());
+
+        return animalsArray;
     }
 
 
