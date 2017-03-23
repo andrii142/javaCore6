@@ -11,7 +11,7 @@ public class UseCollections {
 
     public static void main(String[] args) {
 
-        LinkedList linkedList = new LinkedList();
+        LinkedList<String> linkedList = new LinkedList<String>();
         linkedList.add(new String("Some"));
         linkedList.add("Some");
         linkedList.add("Some1");
@@ -29,6 +29,7 @@ public class UseCollections {
                 System.out.println(o.getClass());
             }
         }
+
 
 
     }
