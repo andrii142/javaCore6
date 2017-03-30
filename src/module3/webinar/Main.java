@@ -16,7 +16,7 @@ public class Main {
 
 
         Car honda1 = new Car("civik", 2009);
-        Car honda2 = new Car(2010, "civik2", 10000, "Jack");
+//        Car honda2 = new Car(2010, "civik2", 10000, "Jack");
 
 
  //       honda1.printYear();

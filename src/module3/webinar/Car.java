@@ -1,9 +1,8 @@
 package module3.webinar;
 
-public class Car {
+public class Car extends Vehicle implements Comparable<Vehicle> {
     int year;
     String model;
-    int price;
     String nameOfTheOwner;
 
 
@@ -12,13 +11,12 @@ public class Car {
         this.year = year;
     }
 
-    Car(int year, String model, int price, String nameOfTheOwner) {
+    public Car(String model, int year, int price, String nameOfTheOwner) {
+        super(price);
         this.year = year;
         this.model = model;
-        this.price = price;
         this.nameOfTheOwner = nameOfTheOwner;
     }
-
 
 
     //перегрузка метода
@@ -51,5 +49,43 @@ public class Car {
 
     public int getYear() {
         return year;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Car car = (Car) o;
+
+        if (getYear() != car.getYear()) return false;
+        if (getModel() != null ? !getModel().equals(car.getModel()) : car.getModel() != null) return false;
+        return !(nameOfTheOwner != null ? !nameOfTheOwner.equals(car.nameOfTheOwner) : car.nameOfTheOwner != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getYear();
+        result = 31 * result + (getModel() != null ? getModel().hashCode() : 0);
+        result = 31 * result + (nameOfTheOwner != null ? nameOfTheOwner.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "year=" + year +
+                ", model='" + model + '\'' +
+                ", nameOfTheOwner='" + nameOfTheOwner + '\'' +
+                '}';
+    }
+
+
+
+    @Override
+    public int compareTo(Vehicle o) {
+        return this.getPrice() - o.getPrice();
     }
 }

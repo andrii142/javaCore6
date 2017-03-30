@@ -1,9 +1,6 @@
 package module7.offline;
 
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by citsym on 23.03.17.
@@ -24,6 +21,8 @@ public class UseMap {
         Map linkedMap = new LinkedHashMap();
 
         calculateClassRoom(map);
+
+//        linkedMap = map;
     }
 
     private static void calculateClassRoom(Map<String, Integer> map) {
