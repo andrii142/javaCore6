@@ -36,12 +36,6 @@ public class UseCats {
                 6
         );
 
-//
-//        Car.Engine otherEngine = carVasya.new Engine(3);
-//
-//        carVasya.fire(otherEngine);
-
-
         carVasya.drive();
 
 

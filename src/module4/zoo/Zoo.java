@@ -45,7 +45,7 @@ public final class Zoo {
         }
     }
 
-    public  Animal[] initZooWithAnimals(){
+    public static   Animal[] initZooWithAnimals(){
         Animal[] animalsArray = new Animal[2];
 
         Monkey monkeyMasha = new Monkey("Masha", "Brown");
