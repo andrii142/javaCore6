@@ -34,7 +34,7 @@ public class UseAbstractVsInterface {
         CanBeBeFunWith cat = new CanBeBeFunWith() {
             @Override
             public void drinkABeer() {
-                System.out.println("Cat drinks beer too");
+                System.out.println("Car drinks beer too");
             }
 
             @Override
