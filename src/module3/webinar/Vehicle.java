@@ -17,4 +17,12 @@ public class Vehicle {
     public int getPrice() {
         return price;
     }
+
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "price=" + price +
+                '}';
+    }
 }

@@ -1,5 +1,7 @@
 package module9.offline;
 
+
+
 /**
  * Created by citsym on 30.03.17.
  */
@@ -9,6 +11,15 @@ public class Car {
     private Wheel[] weels = new Wheel[4];
 
     String name;
+
+    private Engine engine;
+
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Car() {
+    }
 
     {
         for (int i = 0; i < 4; i++) {
@@ -53,11 +64,20 @@ public class Car {
     ;
 
 
+    public Wheel[] getWeels() {
+        return weels;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+
+    public Engine getEngine() {
+        return engine;
     }
 }

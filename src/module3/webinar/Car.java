@@ -73,16 +73,15 @@ public class Car extends Vehicle implements Comparable<Vehicle> {
         return result;
     }
 
+
     @Override
     public String toString() {
         return "Car{" +
                 "year=" + year +
                 ", model='" + model + '\'' +
-                ", nameOfTheOwner='" + nameOfTheOwner + '\'' +
+                ", nameOfTheOwner='" + nameOfTheOwner + super.toString() + '\'' +
                 '}';
     }
-
-
 
     @Override
     public int compareTo(Vehicle o) {
