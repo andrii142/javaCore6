@@ -12,13 +12,14 @@ public class Car {
 
     String name;
 
-    private Engine engine;
+    private Engine engine = new Engine();
 
     public Car(Engine engine) {
         this.engine = engine;
     }
 
     public Car() {
+        engine.setValue(2);
     }
 
     {
