@@ -28,7 +28,6 @@ public class UseResources {
 //
 //            symbol = (char) k;
 //
-//            System.out.print(symbol);
 //
 //        }
 
