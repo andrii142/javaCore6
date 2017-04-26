@@ -1,6 +1,7 @@
 package module11;
 
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
 public class UsePeople {
 
     public static void main(String[] args) {
+
 
         // prepare data
         List<Company> listCompanies = new ArrayList<>();

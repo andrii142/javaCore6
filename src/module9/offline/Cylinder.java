@@ -1,9 +1,11 @@
 package module9.offline;
 
+import java.io.Serializable;
+
 /**
  * Created by citsym on 03.04.17.
  */
-public class Cylinder {
+public class Cylinder implements Serializable {
 
     private String material = "Steal";
 

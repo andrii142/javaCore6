@@ -1,11 +1,17 @@
 package module9.offline;
 
 
+import java.io.Serializable;
 
 /**
+ *
+ * This class is a representation for Car object
+ *
+ * @author  Pavlo Baranovskiy
+ *
  * Created by citsym on 30.03.17.
  */
-public class Car {
+public class Car implements Serializable {
 
     //    private Startable tail = new Engine(2);
     private Wheel[] weels = new Wheel[4];
@@ -30,6 +36,12 @@ public class Car {
     }
 
 
+    /**
+     * This method starts some logic passed inside the methode
+     *
+     * @param startable - this value means some object to be started
+     * @param key
+     */
     public void fire(Startable startable, int key) {
         startable.start(key);
 
@@ -47,7 +59,7 @@ public class Car {
     }
 
 
-    private class Wheel {
+    private class Wheel implements Serializable{
         String color = "black";
 
         public void spin() {

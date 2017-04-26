@@ -1,11 +1,13 @@
 package module9.offline;
 
+import java.io.Serializable;
+
 /**
  * Created by citsym on 03.04.17.
  */
-public class Engine {
+public class Engine implements Serializable {
 
-    private double value;
+    private transient double value;
 
     private Cylinder[] cilinders = new Cylinder[8];
 
